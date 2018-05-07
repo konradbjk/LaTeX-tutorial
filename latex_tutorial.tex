@@ -1,0 +1,193 @@
+\documentclass[11pt]{article}
+
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{float}
+
+\begin{document}
+
+
+\title{LateX document}
+\author{Konrad Bujak}
+\date{\today} 
+\maketitle
+
+\tableofcontents
+
+This gives automatic date
+
+\section{Section 1}
+	\subsection{greek letters}
+
+$$\pi$$
+$$\alpha$$
+$$A=\pi r^2$$
+
+	\subsection{trig functions}
+$$y = \sin{x}$$
+$$y = sin(x)$$
+
+	\subsection{logaritms}
+$$\log_5{x}$$
+$$\ln{x}$$
+
+	\subsection{fractions}
+$$\frac{1}{2}$$
+There is $\frac{2}{3}$ of the water in glass. You can also make this fraction bigger using displaystyle $\displaystyle{\frac{x}{x^2-12x+3}}$ as you can see.
+
+	\subsection{square roots}
+$$\sqrt{2}$$
+$$\sqrt[3]{8} = 2$$
+$$\sqrt[3]{3x+123+\sin{x}}$$
+$$\sqrt{\frac{1}{\sqrt{x}}}$$
+
+\section{Section 2} \label{sec:section2} 
+
+
+	\subsection{brackets}
+$$(x+1)$$
+$$3[2+(x+1)]$$
+$$3x\left(\frac{2}{4}\right)$$
+$$3x\left[2+\frac{2}{3}\right]$$
+
+curly brackets:
+$$\{a,b,c\}$$
+$$3x\left\{2+\frac{2}{3}\right\}$$
+$$\left\{x^2\right.$$
+
+	\subsection{Signs}	
+	
+Dollar symbol: $\$12.55$
+
+Absolute value:
+$$|x|$$
+$$\left|\frac{x}{x-1}\right|$$
+$$\left. \frac{dy}{dx} \right|_{x=1}$$
+
+	\subsection{Tables}
+
+\begin{tabular}{c|ccccc}
+
+$x$ & 1 & 2 & 3 & 4 & 5 \\ \hline 
+$f(x)$ & 10 & 12 & 13 & 14 & 15 \\
+
+\end{tabular}
+
+\begin{eqnarray}
+5x^2-9&=& x+3\\
+4x^2&=& 12\\
+x^3&=& 3\\
+x&\approx&\pm1.732
+\end{eqnarray}
+Hiding equation number:
+\begin{eqnarray*}
+4x^2&=& 12\\
+x^3&=& 3
+\end{eqnarray*}
+
+\begin{eqnarray}
+5x^2-9&=& x+3
+\end{eqnarray}
+
+	\subsection{Lists}
+
+		\subsubsection{Enumeraterd Lists}
+\begin{enumerate}
+\item penicl
+\item calculator
+\item ruler
+\item paper
+\item notebook
+	\begin{enumerate}
+	\item red notebook
+		\begin{enumerate}
+		\item pages 1-3
+		\begin{enumerate}
+		\item page 1
+		\end{enumerate}
+		\end{enumerate}
+	\item blue notebook
+
+	\end{enumerate}
+\end{enumerate}
+
+		\subsubsection{Itemized list}
+
+\begin{itemize}
+\item pencl
+\item calculator
+\item ruler
+\item paper
+\item notebook
+	\begin{itemize}
+	\item red notebook
+		\begin{itemize}
+		\item pages 1-3
+			\begin{itemize}
+			\item page 1
+			\end{itemize}
+		\end{itemize}
+	\item blue notebook
+
+	\end{itemize}
+
+\end{itemize}
+
+\begin{enumerate}
+\item[item1]: penicl
+\item[item2]: calculator
+\item[item3] ruler
+\item paper
+\item notebook
+\end{enumerate}
+
+\section{Text formating}
+
+You can make text \textit{italic} or make it \textbf{bold face} or \textsc{small caps}. Also there is \texttt{typewriter}, for example for urls \texttt{https://google.com}
+
+\begin{center}
+This text is center
+\end{center}
+
+\begin{flushleft}
+This is left-justified
+\end{flushleft}
+\begin{flushright}
+This is right-justified
+\end{flushright}
+
+\section{Graphic}
+To include graphics, please remember about inserting package \textbf{graphicx}.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{img/image1.png}
+	\caption{Nike shoes customization }
+	\label{fig:nike_shoes}
+\end{figure}
+
+But remember that images must be as .png, .jpg, .gif or .pdf
+
+\section{Hyper Links}
+
+
+	\subsection{\textbf{\textbackslash hyperref}}
+
+We use \hyperref[nike_shoes]{figure \ref*{fig:nike_shoes}} to show the promotions and customization of nike shoes. We use asterisk here to avoid nested hyperlinks. We receive the number of figure that ws labeled.
+
+Also using labels we can directly link to specific point in document.
+This \hyperref[fig:nike_shoes]{picture} shows customization of shoes.
+
+In \hyperref[sec:section2]{Section 2} we have shown how to use brackets.
+
+	\subsection{\textbf{\textbackslash url}}
+This function just makes clicakble urls
+
+\url{https://en.wikibooks.org/wiki/LaTeX/Hyperlinks}
+
+	\subsection{\textbf{\textbackslash href}}
+
+This function shows our description of url but when clicked on it, the web browser points to given url.
+
+\href{https://www.wikibooks.org}{Wikibooks home}
+
+\end{document}
